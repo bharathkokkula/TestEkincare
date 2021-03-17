@@ -7,6 +7,6 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiHelper {
-    @GET("/api/json/get/bTTptqjGnC?indent=2")
+    @GET("/api/json/get/bOPXKvVZVe?indent=2")
     fun getdata() : Call<ResponceData>
 }

@@ -3,7 +3,6 @@ package com.example.testproject
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -28,14 +27,17 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.getmessages()?.observe(this, Observer {
                 if (it != null)
                     mainViewModel.savedata(it)
-                binding.rvMesages.adapter = it.messages?.let { it1 -> MainAdapter(it1) }
+                binding.rvMesages.adapter = it.messages?.let { it1 -> MainAdapter(it1,this) }
                 binding.tvDoctor.text = it.consultation_request?.doctor_name
                 binding.tvStatus.text = if (it.consultation_request?.consent
                                 ?: false) "Online" else "Offline"
             })
         } else {
             mainViewModel.getofflinemessages()?.observe(this, Observer {
-                binding.rvMesages.adapter = it.messages?.let { it1 -> MainAdapter(it1) }
+                binding.rvMesages.adapter = it.messages?.let { it1 -> MainAdapter(
+                    it1,
+                    this
+                ) }
                 binding.tvDoctor.text = it.consultation_request?.doctor_name
                 binding.tvStatus.text = /*if(it.consultation_request?.consent?:false) "Online" else */"Offline"
             })

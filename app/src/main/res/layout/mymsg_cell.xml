@@ -6,75 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/margin_5"
 >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@drawable/message_back"
-        android:padding="5dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:text="You have shared an image"
-            android:textColor="#000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/ivImageTick"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <ImageView
-            android:id="@+id/ivImageTick"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="7dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/tick" />
-
-        <TextView
-            android:id="@+id/tvImageTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="5dp"
-            android:text="TextView"
-            android:textColor="#B8C0BF"
-            android:textSize="10sp"
-            app:layout_constraintEnd_toStartOf="@+id/ivImageTick"
-            app:layout_constraintTop_toBottomOf="@+id/tvImage" />
-
-        <TextView
-            android:id="@+id/tvClickinfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click info"
-            android:textColor="#B8C0BF"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvImageTime"
-            app:layout_constraintStart_toStartOf="@+id/tvImage"
-            app:layout_constraintTop_toTopOf="@+id/tvImageTime" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tvImage"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-          />
-    </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMsg"
         android:layout_width="wrap_content"
@@ -82,7 +13,7 @@
         android:layout_gravity="right"
         android:background="@drawable/message_back"
         android:padding="5dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
